@@ -7,11 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd frontend && npm run build",
     "install-frontend": "cd frontend && npm install",
-    "install-backend": "cd backend && npm install",
+    "install-backend": "cd Backend && npm install",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-frontend && npm run install-backend && npm run build",
     "start": "cd backend && node app.js",
     "frontend": "cd frontend && npm start",
-    "dev": "concurrently -n 'frontend, backend'-c \"cd backend && nodemon app.js\" \"npm run frontend\" "
+    "dev": "concurrently -n 'frontend, backend'-c \"cd Backend && nodemon app.js\" \"npm run frontend\" "
   },
   "keywords": [],
   "author": "",

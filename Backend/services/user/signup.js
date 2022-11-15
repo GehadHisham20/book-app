@@ -10,7 +10,7 @@ let signup=async(request,response)=>{
     response.json({message:"email already exists"})
  }
  else{
-    bcrypt.hash(password,4,(error,hashPass)=>{
+    bcrypt.hash(password,process.env.ROUND,(error,hashPass)=>{
         if(error)
         response.json({message:"error in hashed password",error})
         else{

@@ -8,7 +8,7 @@ let signin=async(request,response)=>{
     if(isFound){
         const match=await bcrypt.compare(password,isFound.password)
         if(match){
-            let token=jwt.sign({userId:isFound._id,isAdmin:isFound.isAdmin},'mytoken')
+            let token=jwt.sign({userId:isFound._id,isAdmin:isFound.isAdmin},process.env.secretKey)
             response.json({message:"success",token})
         }
         else

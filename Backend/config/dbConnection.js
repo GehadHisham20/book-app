@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const  dbConnection=()=>{
-    mongoose.connect("mongodb+srv://gehad:gehad1999@cluster0.laq6fn3.mongodb.net/bookApp")
+    mongoose.connect(process.env.DBCONNECTION)
 .then(()=>{
     console.log("database is connected...")
 })

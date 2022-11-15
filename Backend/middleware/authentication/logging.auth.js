@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 
 const loggingAuth=(request,response,next)=>{
     const token = request.header('token')
-    jwt.verify(token, 'mytoken', async function(error, decoded) {
+    jwt.verify(token, process.env.secretKey, async function(error, decoded) {
         if(error){
             response.json({message:"error in token",error}) 
         }

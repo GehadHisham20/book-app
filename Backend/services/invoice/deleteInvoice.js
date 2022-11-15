@@ -5,7 +5,6 @@ import bookModel from './../../models/book.model.js';
 let deleteInvoice=async(request,response)=>{
     let invoiceId=request.header('invoiceId')
     let invoice= await invoiceModel.findOne({_id:invoiceId}).populate('bookId','quantity')
-    console.log(invoice);
    if(invoice){
     await bookModel.findOneAndUpdate({_id:invoice.bookId._id},{quantity:invoice.bookId.quantity+1})
     let result=await invoiceModel.deleteOne({_id:invoiceId})

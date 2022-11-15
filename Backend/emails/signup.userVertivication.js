@@ -17,6 +17,5 @@ async function vertifyEmail(){
         html: `<h1>Vertification Code</h1>
         <p></p>`, // html body
       });
-      console.log(info);
 }
 export default vertifyEmail;

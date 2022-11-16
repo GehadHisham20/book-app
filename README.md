@@ -1,11 +1,11 @@
 # book-app
 mern stack project 
-##App features:
-###user can:
+## App features:
+### user can:
 1. create account
 2. sign in
 3. make borrow request
-###admin can:
+### admin can:
 1. add, update, read, and delete books
 2. read all invoices
 ### some notes:
